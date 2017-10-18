@@ -24,5 +24,5 @@ public class JUnitTest {
 	  @Test
 	  public void test_simple_example_3() {
 	    assertNotNull(test_simple.isWellSorted(null));
-;	  }
+	  }
 }
