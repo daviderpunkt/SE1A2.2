@@ -1,0 +1,42 @@
+package Übung2;
+
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+public class ProjectTest {
+
+	
+		
+		Project test;
+
+		@Before
+		public void setUp(){
+			test = new Project(new String[][]{{"A", "C"}, {"B", "C"}, {"C", "D"}});
+		}
+		
+		@Test
+		public void test_1() {
+			assertTrue(test.isWellSorted_A(new String[]{"A", "B", "B", "C"})); 
+		}
+		@Test
+		public void test_2() {
+			assertFalse(test.isWellSorted_A(new String[]{"D", "B", "C", "C"})); 
+		}
+				
+		@Test
+		public void test_3() {
+			assertTrue(test.isWellSorted_B(new String[]{"A", "D", "B", "C"})); 
+		}
+		@Test
+		public void test_4() {
+			assertFalse(test.isWellSorted_B(new String[]{"D", "A", "B", "C"})); 
+		}
+		@Test
+		public void test_5() {
+			assertFalse(test.isWellSorted_B(null)); 
+		}
+	}
+	
+	
